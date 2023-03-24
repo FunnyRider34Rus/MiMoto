@@ -1,4 +1,4 @@
-package com.elpablo.navigation
+package com.elpablo.mimoto.navigation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

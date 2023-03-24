@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.elpablo.navigation"
+    namespace = "om.elpablo.mimoto.core.navigation"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {

@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.SportsMotorsports
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.elpablo.mimoto.core.component.R
 
 @Composable
 fun BottomNavBar() {

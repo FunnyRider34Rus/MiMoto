@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.elpablo.mimoto"
+    namespace = "com.elpablo.mimoto.core.component"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {

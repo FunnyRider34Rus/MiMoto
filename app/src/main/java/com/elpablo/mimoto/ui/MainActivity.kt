@@ -10,8 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.elpablo.mimoto.BottomNavBar
-import com.elpablo.mimoto.navigation.Navigation
-import com.elpablo.mimoto.navigation.Screen
+import com.elpablo.mimoto.Navigation
+import com.elpablo.mimoto.Screen
+
 import com.elpablo.mimoto.ui.theme.MiMotoTheme
 
 class MainActivity : ComponentActivity() {
