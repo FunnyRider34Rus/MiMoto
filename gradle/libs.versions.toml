@@ -1,18 +1,27 @@
 [versions]
+compileSdk = "33"
+minSdk = "21"
+targetSdk = "33"
+
 androidxActivity = "1.7.0"
-androidGradlePlugin = "7.4.1"
+androidGradlePlugin = "7.4.2"
 androidxComposeCompiler = "1.4.2"
 androidxComposeBom = "2023.01.00"
 androidxCore = "1.9.0"
 androidxEspresso = "3.5.1"
+androidxNavigation = "2.5.3"
 androidxTestExt = "1.1.5"
 junit4 = "4.13.2"
 kotlin = "1.8.10"
+junit = "1.1.5"
+appcompat = "1.6.1"
+material = "1.8.0"
 
 [libraries]
 androidx-compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
@@ -22,8 +31,12 @@ androidx-test-compose-ui = { group = "androidx.compose.ui", name = "ui-test-juni
 androidx-test-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-test-compose-ui-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 android-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

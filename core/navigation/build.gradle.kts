@@ -1,31 +1,25 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.elpablo.mimoto"
+    namespace = "com.elpablo.navigation"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.elpablo.mimoto"
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
     }
@@ -36,19 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
-    }
 }
 
 dependencies {
-    //Modules
-    implementation(project(":core:navigation"))
-    implementation(project(":data"))
-    implementation(project(":domain"))
     //Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.compose.activity)
@@ -58,6 +42,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     //Navigation
     implementation(libs.androidx.compose.navigation)
+
     //Tests
     testImplementation(libs.junit4)
     androidTestImplementation(libs.androidx.test.ext)
