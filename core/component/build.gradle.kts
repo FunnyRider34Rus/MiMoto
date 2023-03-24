@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.elpablo.data"
+    namespace = "com.elpablo.mimoto"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -30,14 +30,31 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
+    }
 }
 
 dependencies {
-    implementation(project(":domain"))
+    //Modules
+    implementation(project(":core:navigation"))
     //Core
     implementation(libs.androidx.core.ktx)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.iconsExtended)
+
     //Tests
     testImplementation(libs.junit4)
     androidTestImplementation(libs.androidx.test.ext)
     androidTestImplementation(libs.androidx.test.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.test.compose.ui)
+    debugImplementation(libs.androidx.test.compose.ui.tooling)
+    debugImplementation(libs.androidx.test.compose.ui.manifest)
 }

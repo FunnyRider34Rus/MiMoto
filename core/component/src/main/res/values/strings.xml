@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bottomnavbar_lable_dashboard">Лента</string>
+    <string name="bottomnavbar_lable_chat">Чат</string>
+    <string name="bottomnavbar_lable_ride">Драйв</string>
+    <string name="bottomnavbar_lable_profile">Профиль</string>
+</resources>

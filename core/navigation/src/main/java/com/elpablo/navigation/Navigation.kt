@@ -19,4 +19,9 @@ fun Navigation(navController: NavHostController, modifier: Modifier, startDestin
 sealed class Screen(val route: String) {
     object NAVGRAPH : Screen(route = "root_nav_graph")
     object AUTHENTICATION : Screen(route = "auth_screen")
+    object DASHBOARDLIST : Screen(route = "dashboard_list")
+    object DASHBOARDDETAIL : Screen(route = "dashboard_detail")
+    object CHAT : Screen(route = "chat")
+    object RIDE : Screen(route = "ride")
+    object PROFILE : Screen(route = "profile")
 }

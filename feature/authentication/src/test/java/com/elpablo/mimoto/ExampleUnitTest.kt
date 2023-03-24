@@ -1,4 +1,4 @@
-package com.elpablo.authentication
+package com.elpablo.mimoto
 
 import org.junit.Test
 

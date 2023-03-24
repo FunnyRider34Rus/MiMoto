@@ -1,5 +1,6 @@
-package com.elpablo.mimoto.core.components
+package com.elpablo.mimoto
 
+import android.R
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -47,7 +48,7 @@ fun TopAppBar(
 @Composable
 fun TopAppBarPreview() {
     TopAppBar(
-        titleRes = android.R.string.untitled,
+        titleRes = R.string.untitled,
         navigationIcon = Icons.Default.Search,
         actionIcon = Icons.Default.Menu,
         modifier = Modifier

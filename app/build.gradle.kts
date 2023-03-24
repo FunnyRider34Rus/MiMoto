@@ -47,8 +47,9 @@ android {
 dependencies {
     //Modules
     implementation(project(":core:navigation"))
-    implementation(project(":data"))
+    implementation(project(":core:component"))
     implementation(project(":domain"))
+    implementation(project(":feature:authentication"))
     //Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.compose.activity)
