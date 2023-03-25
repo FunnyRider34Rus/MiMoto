@@ -14,8 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MiMoto"
 include(":app")
+include(":data")
 include(":domain")
+include(":core:component")
 include(":core:navigation")
 include(":feature:authentication")
-include(":core:component")
-include(":data")
+

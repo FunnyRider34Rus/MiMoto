@@ -1,4 +1,4 @@
-package com.elpablo.mimoto
+package com.elpablo.mimoto.core.navigation
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -6,13 +6,17 @@ import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Message
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.SportsMotorsports
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.elpablo.mimoto.core.component.R
+import om.elpablo.mimoto.core.navigation.R
 
-@Composable
-fun BottomNavBar() {
-
+sealed class Screen(val route: String) {
+    object NAVGRAPH : Screen(route = "root_nav_graph")
+    object AUTHENTICATION : Screen(route = "auth_screen")
+    object DASHBOARDLIST : Screen(route = "dashboard_list")
+    object DASHBOARDDETAIL : Screen(route = "dashboard_detail")
+    object CHAT : Screen(route = "chat")
+    object RIDE : Screen(route = "ride")
+    object PROFILE : Screen(route = "profile")
 }
 
 sealed class BottomBarItems(

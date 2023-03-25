@@ -1,4 +1,4 @@
-package com.elpablo.mimoto
+package com.elpablo.mimoto.core.navigation
 
 import org.junit.Test
 

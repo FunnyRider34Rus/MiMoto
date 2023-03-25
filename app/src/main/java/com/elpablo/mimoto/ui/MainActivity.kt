@@ -9,12 +9,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.elpablo.mimoto.BottomNavBar
-import com.elpablo.mimoto.Navigation
-import com.elpablo.mimoto.Screen
+import com.elpablo.mimoto.core.component.BottomNavBar
+import com.elpablo.mimoto.core.navigation.Screen
+import com.elpablo.mimoto.navigation.Navigation
 
 import com.elpablo.mimoto.ui.theme.MiMotoTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

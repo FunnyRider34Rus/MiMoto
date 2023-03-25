@@ -1,6 +1,5 @@
-package com.elpablo.mimoto
+package com.elpablo.mimoto.core.component
 
-import android.R
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -14,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopAppBar(
+fun MiTopAppBar(
     @StringRes titleRes: Int,
     navigationIcon: ImageVector,
     actionIcon: ImageVector,
@@ -44,11 +43,23 @@ fun TopAppBar(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MiTopAppBar(
+    @StringRes titleRes: Int,
+    modifier: Modifier,
+) {
+    CenterAlignedTopAppBar(
+        title = { Text(text = stringResource(id = titleRes)) },
+        modifier = modifier
+    )
+}
+
 @Preview
 @Composable
 fun TopAppBarPreview() {
-    TopAppBar(
-        titleRes = R.string.untitled,
+    MiTopAppBar(
+        titleRes = android.R.string.untitled,
         navigationIcon = Icons.Default.Search,
         actionIcon = Icons.Default.Menu,
         modifier = Modifier

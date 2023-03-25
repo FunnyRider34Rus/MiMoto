@@ -1,4 +1,4 @@
-package com.elpablo.mimoto.navigation
+package com.elpablo.mimoto.feature.auth
 
 import org.junit.Test
 
